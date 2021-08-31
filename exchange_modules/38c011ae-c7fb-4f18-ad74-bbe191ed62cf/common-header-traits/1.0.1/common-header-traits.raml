@@ -1,0 +1,49 @@
+#%RAML 1.0 Trait
+headers:
+  correlation_Id:
+    required: true
+  client_id:
+    type: string
+    minLength: 10
+    maxLength: 10
+  client_secret:
+    type: string
+    minLength: 10
+    maxLength: 10   
+responses:
+  400:
+    description: Output is response code of Bad Request
+    body:
+      example: !include common-errors/400-example.raml
+  401:
+    description: Output is response code of Unauthorized error
+    body:
+      example: !include common-errors/401-example.raml
+  404:
+    description: Requested resource not found
+    body:
+        example: !include common-errors/404-example.raml
+  405:
+    description: Method Not Allowed
+    body:
+      example: !include common-errors/405-example.raml
+  415:
+    description: Unsupported Media Type
+    body:
+      example: !include common-errors/415-example.raml    
+  422:
+    description: Output is response code of Unprocessable Entity
+    body:
+      example: !include common-errors/422-example.raml
+  500:
+    description: Output is response code of Internal Server Error
+    body:
+      example: !include common-errors/500-example.raml
+  503:
+    description: The Service is Unavailable 
+    body:
+      example: !include common-errors/503-example.raml 
+  504:
+    description: Gateway Timeout 
+    body:
+      example: !include common-errors/504-exmaple.raml              

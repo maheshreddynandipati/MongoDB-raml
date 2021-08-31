@@ -1,0 +1,1123 @@
+#%RAML 1.0 DataType
+displayName: GET Response DataType
+type: object
+properties:
+  id:
+    type: Number
+  identifier:
+    type: string
+  cultures:
+    type: array
+    items:
+      type: string
+  properties:
+    type: object
+    properties:
+      FileName:
+        type: string
+      title:
+        type: string
+      Description:
+        type: object
+        properties:
+          "en-us":
+            type: string    
+      Keywords:
+        type: string | nil
+      OccasionOrSeason:
+        type: string | nil
+      Language:
+        type: string | nil
+      Comments:
+        type: string | nil
+      IsAdapted:
+        type: string | nil
+      ComponentCode:  
+        type: string | nil
+      SKU:
+        type: string | nil
+      MIMEType:
+        type: string
+      ImageWidth:
+        type: string
+      ImageHeight:
+        type: string
+      ImageOrientation:
+        type: string | nil
+      ImageResolution:
+        type: string
+      ColourSpace:
+        type: string | nil
+      FileType:
+        type: string
+      VideoFormat:
+        type: string | nil
+      VideoHeight:
+        type: string | nil
+      VideoWidth:
+        type: string | nil
+      VideoFramerate:
+         type: string | nil
+      VideoBitrate:
+         type: string | nil
+      VideoDuration:
+         type: string | nil
+      AudioFormat:
+        type: string | nil
+      AudioChannels:
+        type: string | nil  
+      AudioDuration:
+        type: string | nil  
+      VideoVoiceoverLanguage:
+        type: string | nil  
+      AudioSampleRate:
+        type: string | nil 
+      AudioBitrate:
+        type: string | nil 
+      UsageSummary:
+        type: string | nil 
+      UsageURL:
+        type: string | nil 
+      PublicationDate:
+        type: string | nil 
+      SmartBrandLegacyAssetID:
+        type: string | nil 
+      SmartApproveLegacyProjectID:
+        type: string | nil
+      MigratedSmartBrandData:
+        type: string | nil
+      SmartbrandLegacyTaxonomyData:
+        type: string | nil
+      SmartbrandLegacyLightboxes:
+        type: string | nil
+      IngestionWave:
+        type: string | nil
+      ValidationLog:
+        type: string | nil
+      ChiliType:
+        type: string | nil
+      ReasonForStatus:
+        type: string | nil
+      ProjectName:
+        type: string
+      ProjectOwner:
+        type: string
+      AgencyContact:
+        type: string
+      AgencyName:
+        type: string | nil
+      VisionDescription:
+        type: string | nil
+      VisionOcrText:
+        type: string | nil
+      Asset_HasComplexRightsProfiles:
+        type: string | nil
+      Asset_DrmComplexity:
+        type: string | nil
+      Asset_Copyright:
+        type: string | nil
+      UsageRightsType:
+        type: object
+        properties:
+          identifier:
+            type: string
+          labels:
+            type: object
+            properties:
+              en-US:
+                type:
+                  string
+      UsageRightsSummary:
+        type: string | nil  
+      FontStatus:
+        type: string | nil 
+      FontName:
+        type: string | nil 
+      CostofRenegotiation:
+        type: string | nil 
+      Asset_ExplicitApprovalRequired:
+        type: boolean
+      FileSize:
+        type: number
+      FileProperties:
+        type: object
+        properties:
+          properties:
+            type: object
+            properties:
+              group:
+                type: string
+              extension:
+                type: string
+              width:
+                type: number
+              height:
+                type: number
+              resolution:
+                type: number
+              megapixels:
+                type: number
+              application:
+                type: string
+      ApprovedBy:
+        type: string
+      ApprovalDate:
+        trype:string
+      ReasonForRejection:
+        type: string | nil
+      ArchivedBy:
+        type: string | nil
+      ArchivalDate:
+        type: string | nil
+      HasDuplicate:
+        type: boolean
+      IsDraft:
+        type: string | nil
+      MainFile:
+        type: object
+        properties:
+          locations:
+            type: object
+            properties:
+              local:
+                type: array
+      properties:
+        type: object
+        properties:
+          filesizebytes:
+            type: number
+          filename:
+            type: string
+          group:
+            type: string
+          extension:
+            type: string
+          filesize:
+            type: number
+          width:
+            type: number
+          height:
+            type: number
+      AlternateFile:
+        type: object
+        properties:
+          locations:
+            type: object
+            properties:
+              local:
+                type: array
+      Renditions:
+        type: object
+        properties:
+          metedata:
+            type: object
+            properties:
+              status:
+                type: string
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array  
+              sticky:
+                type: string
+      preview:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      preview_download:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      thumbnail:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      thumbnail_cropped:
+        type: object
+        properties:
+          status:
+            type: string
+          locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      bigthumbnail:
+        type: object
+        properties:
+          status:
+            type: string
+          locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      pdf:
+        type: object
+        properties:
+          status:
+            type: string
+          locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      thumbnail1:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      thumbnail2:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      mobile1:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      mobile2:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      desktop2:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      mobile4:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      desktop1:
+        type: object
+        properties:
+          status:
+            type: string
+          properties:
+            type: object
+            properties:
+              width:
+                type: number
+              height:
+                type: number
+              locations:
+                type: object
+                properties:
+                  local:
+                    type: array
+      Structure:
+        type: string | nil
+      Digest:
+        type: tring
+      ExtraRenditions:
+        type: string | nil
+      AverageRating:
+        type: string | nil
+      VirusScanResult:
+        type: object
+        properties:
+          identifier:
+            type: string
+          labels:
+            type: object
+            properties:
+              en-us:
+                type: string
+      IsCheckedOut:
+        type: string | nil
+      IsCheckingIn:
+        type: string | nil
+      IsDiscarding:
+        type: string | nil
+      CheckedOutBy:
+        type: string | nil
+      IsChTemplatePropertiesckedOut:
+        type: string | nil
+      HasAnnotation:
+        type: string | nil
+      relations:
+        type: object
+        properties:
+          LocalizationToAsset:
+            type: object
+            properties:
+              inherits_security:
+                type: boolean
+              self:
+                type: object
+                properties:
+                  href:
+                    type: string
+      CategoryToAsset:
+        type: object
+        properties:
+          parents:
+            type: array of object
+            properties:
+              properties:
+                type: object
+                properties:
+                  type: object
+                  properties:
+                  TaxonomyLabel:
+                    type: object
+                    properties:
+                      en-US:
+                        type: string
+                  LevelIdentifier:
+                    type: string
+                  href:
+                    type: string
+          inherits_security:
+            type: boolen
+          self:
+            type: object
+            properties:
+              href:
+                type: string
+      PortalToAsset:
+        type: object
+        properties:
+          parents:
+            type: array
+          inherits_security:
+            type: boolen
+          self:
+            type: object
+            properties:
+              href:
+                type: string
+      AssetTypeToAsset:
+        type: object
+        properties:
+          parents:
+            type: objects
+            properties:
+              properties:
+                type: object
+                properties:
+                  lable:
+                    type: object
+                    properties:
+                      en-US:
+                        type: object
+              href:
+                type: string
+              inherits_security:
+                type: string
+              self:
+                type: object
+                properties:
+                  href:
+                    type: string
+      CreatorMarketToAsset:
+        type: object
+        properties:
+          parents:
+            type: objects
+            properties:
+              properties:
+                type: object
+                properties:
+                  TaxonomyLabel:
+                    type: object
+                    properties:
+                      en-US:
+                        type: object
+              href:
+                type: string
+              inherits_security:
+                type: string
+              self:
+                type: object
+                properties:
+                  href:
+                    type: string
+      CreatedForMarketToAsset:
+        type: object
+        properties:
+          parents:
+            type: objects
+            properties:
+              properties:
+                type: object
+                properties:
+                  TaxonomyLabel:
+                    type: object
+                    properties:
+                      en-US:
+                        type: object
+              href:
+                type: string
+              inherits_security:
+                type: string
+              self:
+                type: object
+                properties:
+                  href:
+                    type: string
+      CampaignToAsset:
+        type: object
+        properties:
+          parents:
+            type: array
+          inherits_security:
+            type: boolean
+          self:
+            type: object
+            properties:
+              hre:
+                type: string
+      TagToAsset:
+        type: object
+        properties:
+          hre:
+           type: string
+      AssetToAdaptations:
+        type: object
+        properties:
+          hre:
+           type: string
+      GalleryToAsset:
+        type: object
+        properties:
+          parents:
+            type: array
+          inherits_security:
+            type: boolean
+          self:
+            type: object
+            properties:
+              hre:
+                type: string
+      GalleryToMasterAsset:
+        type: object
+        properties:
+          hre:
+           type: string
+      FinalLifeCycleStatusToAsset:
+        type: object
+        properties:
+          parent:
+            type: object
+            properties:
+              properties:
+                type: object
+                properties:
+                  StatusValue:
+                    type: object
+                  href:
+                   type: string
+              inherits_security:
+                type: string
+              self:
+                type: object
+                properties:
+                  href:
+                    type: string 
+      ReportingSystemToAsset:
+        type: object
+        properties:
+         parents:
+           type: array
+         inherits_security:
+          type: strin
+         self:
+           type: object
+           properties:
+             href:
+               type: string
+      ReportingUsageToAsset:
+        type: object
+        properties:
+          href:
+            type: string
+      UserProfileToAvatar:
+        type: object
+        properties:
+          href:
+            type: string
+      UserProfileToMasterAvatar:
+        type: object
+        properties:
+          href:
+            type: string
+      PortalFeatureToAsset:
+        type: object
+        properties:
+          href:
+            type: string
+      ContentRepositoryToAsset:
+        type: object
+        properties:
+          parents:
+            type: array of object
+            properties:
+              properties:
+                type: object
+                properties:
+                  ClassificationName:
+                    type: string
+                  href:
+                    type: string
+      inherits_security:
+        type: object
+        properties:
+          href:
+            type: string
+      AssetMediaToAsset:
+        type: object
+        properties:
+          parents:
+            type: array of object
+            properties:
+              properties:
+                type: object
+                properties:
+                  type: object
+                  properties:
+                  TaxonomyLabel:
+                    type: object
+                    properties:
+                      en-US:
+                        type: string
+                  LevelIdentifier:
+                    type: string
+                  href:
+                    type: string
+      HomepageBrandTitleToAsset:
+        type: object
+        properties:
+          href:
+            type: string
+      M_NewsItemToMasterAsset:
+        type: object
+        properties:
+          href:
+            type: string
+      EntityGenerationTemplateToAsset:
+        type: object
+        properties:
+          href:
+            type: string
+      AssetToParallelApprove:
+        type: object
+        properties:
+          href:
+            type: string
+      AssetToLike:
+        type: object
+        properties:
+          href:
+            type: string
+      VisionColorToAsset:
+        type: object
+        properties:
+          href:
+            type: string
+      MasterFile:
+        type: object
+        properties:
+          parents:
+            type: array of object
+            properties:
+              properties:
+                type: object
+                properties:
+                  ClassificationName:
+                    type: string
+                  href:
+                    type: string
+      created_by:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      created_on:
+        type: DateTime
+      modified_by:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      modified_on:
+        type: DataTime
+      entitydefinition:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      copy:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      permissions:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      lifecycle:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      saved_selections:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      roles:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      annotations:
+        type: object
+        properties:
+          href:
+            type: string
+          title:
+            type: string
+      is_root_taxonomy_item:
+        type:boolean
+      is_path_root:
+        type:boolean
+      is_system_owned:
+        type:boolean
+      version:
+        type: number
+      self:
+        type: object
+        properties:
+          href:
+            type: string
+      renditions:
+        type: object
+        properties:
+          downloadOriginal:
+            type: array of object
+            properties:
+              href:
+                type: string
+          downloadAlternative:
+            type: array of object
+            properties:
+              href:
+                type: string
+          metadata: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          preview:
+            type: array of object
+            properties:
+              href:
+                type: string
+          downloadPreview:
+            type: array of object
+            properties:
+              href:
+                type: string
+          thumbnail: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          bigthumbnail: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          pdf: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          thumbnail1: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          thumbnail2: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          mobile1: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          mobile2: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          desktop2: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          mobile4: 
+            type: array of object
+            properties:
+              href:
+                type: string
+          desktop1: 
+            type: array of object
+            properties:
+              href:
+                type: string 
+      related_paths:
+        type: object
+        properties:
+          CategoryToAsset:
+            type: array of object
+            properties:
+              values:
+                type: object
+                properties:
+                  en-US:
+                    type: string
+              entity:
+                type: string
+              definition:
+                type: string
+          AssetTypeToAsset:
+            type: array of object
+            properties:
+              values:
+                type: object
+                properties:
+                  en-US:
+                    type: string
+              entity:
+                type: string
+              definition:
+                type: string
+          CreatorMarketToAsset:
+            type: array of object
+            properties:
+              values:
+                type: object
+                properties:
+                  en-US:
+                    type: string
+              entity:
+                type: string
+              definition:
+                type: string
+          CreatedForMarketToAsset:
+            type: array of object
+            properties:
+              values:
+                type: object
+                properties:
+                  en-US:
+                    type: string
+              entity:
+                type: string
+              definition:
+                type: string
+
+
+
+                                                                               
+
+
+
+
+
+
+
+
+                    
+
+                                               
+
+
+
+                        
+
+              
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+                                                                               
+                                                                              
+
+
+
+
+        
+
+
+
+                                  
+
+                
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+        
+

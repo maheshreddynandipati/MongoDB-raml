@@ -1,0 +1,99 @@
+#%RAML 1.0
+title: MongoDB-SAPI
+description: for the publishing or retrieving the assets into the MongoDB
+version: v1
+baseUri: https://anypoint.mulesoft.com/api/v1
+mediaType: 
+- application/json
+protocols: [HTTPS,HTTP]
+documentation:
+  - title: MongoDB system api
+    content: this system api is used to publish/retrieving the assets into the MongoDB.
+types:
+  assetDataType: !includ/dataTypes/response/retrieve-asset-dataType.raml
+  queryDataType:  !include/example/response/query-example.json
+  searchRequestDataType: !include/datatype/request/searchdataType.raml
+  searchResponseDatatype: !include/datatype/response/search-dataType.raml    
+uses:
+  lib: /libraries/library.raml 
+securitySchemes:
+  client_Id: !include /security_Scheme/custom-securityScheme.raml     
+/Asset:
+  /query:
+    get: 
+      description: endpoint to get assets fro Mongodb by query parameter
+      displayName: get assets by query parameter
+      is: [lib.headers,lib.errorCodes]
+      securedBy:
+        - client_Id
+      queryParameters:
+          query:
+            type: any
+            example: !include example/request/query-example.raml  
+      
+      responses:
+        200:
+          body:
+            example: !include example/response/query-example.json
+                                  
+  /{assetid}:
+     get:
+      displayName: Get Asset by id
+      description: Endpoint to get  asset one by one
+      is: [lib.headers,lib.errorCodes]
+      securedBy:
+        - client_Id
+      responses:
+        200:
+          body:
+            application/json:
+              type: assetDataType
+              example: !include/example/response/retrieve-asset-example.json
+
+
+     post:
+       displayName: create assets
+       description: endpoint to create the assets
+       is: [lib.headers,lib.errorCodes]
+       securedBy:
+        - client_Id
+       body:
+         example: !include example/request/search-example.json
+       responses:
+         200:
+           body:
+             example: !include example/response/search-example.json
+               
+
+                
+                                  
+     put:
+      displayName: update asset url
+      description: endpoint to update the asset url
+      is: [lib.headers,lib.errorCodes]
+      securedBy:
+        - client_Id
+      body:
+        example: !include example/request/update-asset.json
+      responses:
+            200:
+              body:
+                example: !include example/response/update-example.json
+                  
+                      
+     delete:
+      description: 
+      displayName: 
+      is: [lib.headers,lib.errorCodes]
+      securedBy:
+        - client_Id
+      body:
+        example: !include example/request/delete-asset.json
+      responses:
+        200:
+          body:
+            example: !include example/response/delete-asset.json
+                                  
+                                                                                  
+    
+  

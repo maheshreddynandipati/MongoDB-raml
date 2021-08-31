@@ -1,0 +1,9 @@
+%dw 2.0
+output application/json
+fun defineMonth(number)= if (number==1) "January" else (if(number==2) "February" else (if (number==3) "March" else (if(number==4) "April" else (if(number==5) "May" else (if(number==6) "June" else(if(number==7) "July" else(if(number==8) "August" else (if(number==9) "September" else(if(number==10) "October" else (if(number==11) "November" else "December" ))))) )))))
+---
+(flatten(valuesOf(payload)) map ((item, index) -> item mapObject ((value, key) -> {
+    (( defineMonth(item.Month) ++ "_" ++ (key) as String) : value) if ((key) as String contains "delay"),
+  ((key): value) if(!((key) as String contains "delay") and !((key) as String contains "Month") )
+    } )
+))
